@@ -104,7 +104,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Authentification.cs" />
     <Compile Include="Controllers\AdministrateurController.cs" />
-    <Compile Include="Controllers\ListeStagesController.cs" />
+    <Compile Include="Controllers\AssociationsController.cs" />
+    <Compile Include="Controllers\Demande_InscriptionController.cs" />
+    <Compile Include="Controllers\ListesStagesController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\VolontairesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -128,11 +130,11 @@
     <Content Include="Views\Volontaires\Create.cshtml" />
     <Content Include="Views\Volontaires\Edit.cshtml" />
     <Content Include="Views\Volontaires\Index.cshtml" />
-    <Content Include="Views\ListeStages\Create.cshtml" />
-    <Content Include="Views\ListeStages\Delete.cshtml" />
-    <Content Include="Views\ListeStages\Details.cshtml" />
-    <Content Include="Views\ListeStages\Edit.cshtml" />
-    <Content Include="Views\ListeStages\Index.cshtml" />
+    <Content Include="Views\ListesStages\Details.cshtml" />
+    <Content Include="Views\ListesStages\Index.cshtml" />
+    <Content Include="Views\Associations\Details.cshtml" />
+    <Content Include="Views\Associations\Index.cshtml" />
+    <Content Include="Views\Demande_Inscription\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -142,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Administrateurs\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

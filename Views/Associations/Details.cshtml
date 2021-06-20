@@ -1,0 +1,54 @@
+﻿@model Boutissante_Issam_TDI201_B_TR2_V2.Association
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Association</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayFor(model => model.Ville.Nom_Ville)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nam_Ass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nam_Ass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RaisonSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RaisonSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Ass }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

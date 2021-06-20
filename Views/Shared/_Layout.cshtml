@@ -38,9 +38,12 @@
         <h3>Menu</h3>
         <a href="/Login/Login">Connection</a>
         <a href="/Administrateur/Index">Administrateur</a>
-        <a href="/Volontaires">Volontaires</a>
+        <a href="/Volontaires">Volontaire</a>
+        <a href="/ListesStages">ListeStages</a>
+        <a href="/Associations">Association</a>
+        <a href="/Demande_Inscription/Create">Inscription</a>
 
-        @if(Session["volontaire"] != null)
+        @if (Session["volontaire"] != null)
         {
             <div style="display:flex;flex-grow:1;justify-content:right;align-items:center;">
                 @{
