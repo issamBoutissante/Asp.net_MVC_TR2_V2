@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Boutissante_Issam_TDI201_B_TR2_V2.Volontaire>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Ajouter", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ville.Nom_Ville)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Vlt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prenom_Vlt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mot_Passe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actif)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ville.Nom_Ville)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Vlt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prenom_Vlt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mot_Passe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actif)
+        </td>
+        <td>
+            @Html.ActionLink("Modifier", "Edit", new { id=item.Id_Vlt }) |
+        </td>
+    </tr>
+}
+
+</table>

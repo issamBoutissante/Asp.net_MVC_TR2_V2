@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        body {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.603);
+        }
+
+        header a,p {
+            margin-left: 10px;
+            color: white;
+        }
+        header div{
+            display:flex;
+            margin-left:100px;
+        }
+        div p{
+            padding-top:15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Menu</h3>
+        <a href="/Login/Login">Connection</a>
+        <a href="/Administrateur/Index">Administrateur</a>
+        <a href="/Volontaires">Volontaires</a>
+
+        @if(Session["volontaire"] != null)
+        {
+            <div style="display:flex;flex-grow:1;justify-content:right;align-items:center;">
+                @{
+                    Volontaire volontaire = Session["volontaire"] as Volontaire;
+                }
+                <p>@volontaire.Id_Vlt</p>
+                <p>@volontaire.Nom_Vlt</p>
+                <p>@volontaire.Prenom_Vlt</p>
+            </div>
+        }
+    </header>
+    <div class="container body-content">
+        <hr />
+        @RenderBody()
+        <hr />
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

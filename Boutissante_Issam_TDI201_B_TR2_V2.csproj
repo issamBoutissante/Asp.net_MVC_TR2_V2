@@ -50,6 +50,8 @@
       <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -94,17 +96,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Authentification.cs" />
+    <Compile Include="Controllers\AdministrateurController.cs" />
+    <Compile Include="Controllers\ListeStagesController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\VolontairesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Classes\Association.cs" />
     <Compile Include="Models\Classes\Demande_Inscription.cs" />
-    <Compile Include="Models\Classes\Login.cs" />
     <Compile Include="Models\Classes\Ville.cs" />
     <Compile Include="Models\Classes\Volontaire.cs" />
     <Compile Include="Models\Classes\Stage.cs" />
@@ -114,6 +121,18 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Administrateur\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Volontaires\Create.cshtml" />
+    <Content Include="Views\Volontaires\Edit.cshtml" />
+    <Content Include="Views\Volontaires\Index.cshtml" />
+    <Content Include="Views\ListeStages\Create.cshtml" />
+    <Content Include="Views\ListeStages\Delete.cshtml" />
+    <Content Include="Views\ListeStages\Details.cshtml" />
+    <Content Include="Views\ListeStages\Edit.cshtml" />
+    <Content Include="Views\ListeStages\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,7 +142,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Administrateurs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
