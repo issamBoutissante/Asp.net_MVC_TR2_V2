@@ -46,6 +46,12 @@ namespace Boutissante_Issam_TDI201_B_TR2_V2.Controllers
             return View(demande_Inscription);
         }
 
+        public ActionResult Logout()
+        {
+            Session["volontaire"] = null;
+            return RedirectToAction("Login", "Login");
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -54,5 +60,6 @@ namespace Boutissante_Issam_TDI201_B_TR2_V2.Controllers
             }
             base.Dispose(disposing);
         }
+        
     }
 }
